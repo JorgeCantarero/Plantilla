@@ -1,0 +1,53 @@
+package com.smartstep.Plantilla.model;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+public class Plantilla {
+    @Id
+    private Long numSerie;
+    private int nivelBateria;
+    private double peso;
+    private List<Medicion> mediciones;
+    
+
+    // Constructor
+    public Plantilla(Long numSerie, int nivelBateria, double peso) {
+        this.numSerie = numSerie;
+        this.nivelBateria = nivelBateria;
+        this.peso = peso;
+    }
+
+    // Getters and Setters
+    public Long getNumSerie() {
+        return numSerie;
+    }
+
+    public void setNumSerie(Long numSerie) {
+        this.numSerie = numSerie;
+    }
+
+    public int getNivelBateria() {
+        return nivelBateria;
+    }
+
+    public void setNivelBateria(int nivelBateria) {
+        this.nivelBateria = nivelBateria;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public List<Medicion> getMediciones() {
+        return mediciones;
+    }
+
+    public void setMediciones(List<Medicion> mediciones) {
+        this.mediciones = mediciones;
+    }
+}
