@@ -1,0 +1,52 @@
+package com.smartstep.Plantilla.model;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+public class Medicion {
+    @Id
+    private Long id;
+    private String presion;
+    private String fecha;
+
+    // Constructor
+    public Medicion(Long id, String presion, String fecha) {
+        this.id = id;
+        this.presion = presion;
+        this.fecha = fecha;
+    }
+
+    // Getters and Setters
+    public Long getId() {
+        return id;
+    }
+        this.nombre = nombre;
+        this.valor = valor;
+        this.fecha = fecha;
+    }
+
+    // Getters and Setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getPresion() {
+        return presion;
+    }
+
+    public void setPresion(String presion) {
+        this.presion = presion;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+}
