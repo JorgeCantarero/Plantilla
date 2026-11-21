@@ -2,15 +2,16 @@ package com.smartstep.Plantilla.model;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import java.util.Date;
 
 public class Medicion {
     @Id
     private Long id;
-    private String presion;
-    private String fecha;
+    private double presion;
+    private Date fecha;
 
     // Constructor
-    public Medicion(Long id, String presion, String fecha) {
+    public Medicion(Long id, double presion, Date fecha) {
         this.id = id;
         this.presion = presion;
         this.fecha = fecha;
@@ -34,19 +35,19 @@ public class Medicion {
         this.id = id;
     }
 
-    public String getPresion() {
+    public double getPresion() {
         return presion;
     }
 
-    public void setPresion(String presion) {
+    public void setPresion(double presion) {
         this.presion = presion;
     }
 
-    public String getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 }
