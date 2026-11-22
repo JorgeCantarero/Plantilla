@@ -3,17 +3,22 @@ package com.smartstep.Plantilla.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Profesional {
-    private Long id;
+public class Profesional extends Usuario {
+    private int id; //aqui he cambiado de long a int
+    //para que sea compatible con la clase usuario
     private String nombre;
     private String especialidad;
     private List<Paciente> pacientes;
+    private int minutosActividad;
+    private String notasProfesional;
 
     public Profesional() {
+        super();
         this.pacientes = new ArrayList<>();
     }
 
-    public Profesional(Long id, String nombre, String especialidad) {
+    public Profesional(int id, String nombre, String especialidad) {
+        super(id, null, null, nombre, null);
         this.id = id;
         this.nombre = nombre;
         this.especialidad = especialidad;
@@ -21,11 +26,11 @@ public class Profesional {
     }
 
     // Getters y Setters
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -62,16 +67,14 @@ public class Profesional {
     }
 
     public boolean actualizarObjetivos(
-            Long pacienteId,
-            int objetivoPasos,
-            int minutosActividad,
-            String notasProfesional) {
-        if (pacienteId == null || pacientes == null) {
+            int pacienteId,
+            int objetivoPasos) {
+        if (pacientes == null) {
             return false;
         }
 
         for (Paciente paciente : pacientes) {
-            if (paciente != null && pacienteId.equals(paciente.getId())) {
+            if (paciente != null && pacienteId == paciente.getId()) {
                 paciente.setObjetivoPasos(objetivoPasos);
                 paciente.setMinutosActividad(minutosActividad);
                 paciente.setNotasProfesional(notasProfesional);

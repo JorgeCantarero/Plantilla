@@ -1,56 +1,59 @@
 package com.smartstep.Plantilla.model;
 
-public class Paciente {
-    private Long id;
-    private String nombre;
-    private String email;
-//esto son algunos de los atributos
-   
+import java.util.Date;
+
+public class Paciente extends Usuario {
+    private double peso;
+    private double altura;
+    private Date fechaNacimiento;
+    private String sexo;
     private int objetivoPasos;
     private int minutosActividad;
     private String notasProfesional;
-
-    public Paciente() {
-    }
-
-    public Paciente(Long id, String nombre, String email, int objetivoPasos, int minutosActividad, String notasProfesional) {
-        this.id = id;
-        this.nombre = nombre;
-        this.email = email;
+    
+    
+    
+   //Constructor de la clase Paciente
+    public Paciente(int id, String correo, String dni, String nombre, String apellidos, double peso, double altura, Date fechaNacimiento, String sexo, int objetivoPasos) {
+        super(id, correo, dni, nombre, apellidos);
+        this.peso = peso;
+        this.altura = altura;
+        this.fechaNacimiento = fechaNacimiento;
+        this.sexo = sexo;
         this.objetivoPasos = objetivoPasos;
-        this.minutosActividad = minutosActividad;
-        this.notasProfesional = notasProfesional;
     }
 
-    // Getters y Setters
-    public Long getId() {
-        return id;
+    public double getPeso() {
+        return peso;
+    }
+    public void setPeso(double peso) {
+        this.peso = peso;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+  public double getAltura() {
+        return altura;
+    }
+    public void setAltura(double altura) {
+        this.altura = altura;
     }
 
-    public String getNombre() {
-        return nombre;
+    public Date getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+    public void setFechaNacimiento(Date fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+ public String getSexo() {
+        return sexo;
+    }
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getObjetivoPasos() {
+        public int getObjetivoPasos() {
         return objetivoPasos;
     }
-
     public void setObjetivoPasos(int objetivoPasos) {
         this.objetivoPasos = objetivoPasos;
     }
@@ -70,4 +73,7 @@ public class Paciente {
     public void setNotasProfesional(String notasProfesional) {
         this.notasProfesional = notasProfesional;
     }
+
+
+    
 }
