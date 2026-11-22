@@ -8,7 +8,10 @@ public class Paciente extends Usuario {
     private Date fechaNacimiento;
     private String sexo;
     private int objetivoPasos;
-
+    private int minutosActividad;
+    private String notasProfesional;
+    
+    
     
    //Constructor de la clase Paciente
     public Paciente(int id, String correo, String dni, String nombre, String apellidos, double peso, double altura, Date fechaNacimiento, String sexo, int objetivoPasos) {
@@ -53,6 +56,22 @@ public class Paciente extends Usuario {
     }
     public void setObjetivoPasos(int objetivoPasos) {
         this.objetivoPasos = objetivoPasos;
+    }
+
+    public int getMinutosActividad() {
+        return minutosActividad;
+    }
+
+    public void setMinutosActividad(int minutosActividad) {
+        this.minutosActividad = minutosActividad;
+    }
+
+    public String getNotasProfesional() {
+        return notasProfesional;
+    }
+
+    public void setNotasProfesional(String notasProfesional) {
+        this.notasProfesional = notasProfesional;
     }
 
 

@@ -6,6 +6,9 @@ public class Usuario {
     private String dni;
     private String nombre;
     private String apellidos;
+
+    public Usuario() {
+    }
     
     //Constructor de la clase Usuario
     public Usuario(int id, String correo, String dni, String nombre, String apellidos) {
