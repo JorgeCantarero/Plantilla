@@ -1,17 +1,23 @@
 package com.smartstep.Plantilla.model;
 
+import java.util.List;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity 
 public class Sensor {
     @Id
     private int id;
-    private List<String> cooredenadas;
+    private List<String> coordenadas;
 
     // Constructor
-    public Sensor(int id, List<String> cooredenadas) {
+    public Sensor(int id, List<String> coordenadas) {
         this.id = id;
-        this.cooredenadas = cooredenadas;
+        this.coordenadas = coordenadas;
     }
 
     // Getters and Setters
@@ -23,11 +29,11 @@ public class Sensor {
         this.id = id;
     }
 
-    public List<String> getCooredenadas() {
-        return cooredenadas;
+    public List<String> getCoordenadas() {
+        return coordenadas;
     }
 
-    public void setCooredenadas(List<String> cooredenadas) {
-        this.cooredenadas = cooredenadas;
+    public void setCoordenadas(List<String> cooredenadas) {
+        this.coordenadas = cooredenadas;
     }
 }

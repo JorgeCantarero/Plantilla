@@ -1,22 +1,30 @@
 package com.smartstep.Plantilla.model;
 
+import org.hibernate.annotations.ManyToAny;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+
 import java.util.Date;
 
+@Entity
 public class Medicion {
     @Id
     private int id;
     private double presion;
     private Date fecha;
-    private int sensorId; // ID del sensor al que pertenece la medición
+    @ManyToOne 
+    private Sensor sensor; // Referencia al sensor al que pertenece la medición
 
     // Constructor
-    public Medicion(int id, double presion, Date fecha, int sensorId) {
+    public Medicion(int id, double presion, Date fecha, Sensor sensorId) {
         this.id = id;
         this.presion = presion;
         this.fecha = fecha;
-        this.sensorId = sensorId;
+        this.sensor = sensorId;
     }
     
     // Getters and Setters
@@ -44,11 +52,11 @@ public class Medicion {
         this.fecha = fecha;
     }
 
-    public int getSensorId() {
-        return sensorId;
+    public Sensor getSensor() {
+        return sensor;
     }
 
-    public void setSensorId(int sensorId) {
-        this.sensorId = sensorId;
+    public void setSensor(Sensor sensor) {
+        this.sensor = sensor;
     }
 }

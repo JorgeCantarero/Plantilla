@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.smartstep.Plantilla.model.*;
 
+@RestController
 public class SensorController {
     // Controller logic for Medicion
 
@@ -18,5 +19,14 @@ public class SensorController {
             }
             mediciones.add(medicion);
         }
+    }
+
+    @PostMapping("/tomarMedicion")
+    public void tomarMedicion(@RequestBody Medicion medicion, @RequestParam Date fecha, 
+        @RequestParam double presion) 
+    {
+        numSerie = medicion.getId();
+        sensorId = medicion.getSensorId();
+        Medicion nuevaMedicion = new Medicion(numSerie, presion, fecha, sensorId);
     }
 }
