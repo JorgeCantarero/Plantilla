@@ -5,21 +5,21 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 public class Sensor {
     @Id
-    private Long id;
+    private int id;
     private List<String> cooredenadas;
 
     // Constructor
-    public Sensor(Long id, List<String> cooredenadas) {
+    public Sensor(int id, List<String> cooredenadas) {
         this.id = id;
         this.cooredenadas = cooredenadas;
     }
 
     // Getters and Setters
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

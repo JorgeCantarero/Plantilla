@@ -6,32 +6,25 @@ import java.util.Date;
 
 public class Medicion {
     @Id
-    private Long id;
+    private int id;
     private double presion;
     private Date fecha;
+    private int sensorId; // ID del sensor al que pertenece la medición
 
     // Constructor
-    public Medicion(Long id, double presion, Date fecha) {
+    public Medicion(int id, double presion, Date fecha, int sensorId) {
         this.id = id;
         this.presion = presion;
         this.fecha = fecha;
+        this.sensorId = sensorId;
     }
-
+    
     // Getters and Setters
-    public Long getId() {
-        return id;
-    }
-        this.nombre = nombre;
-        this.valor = valor;
-        this.fecha = fecha;
-    }
-
-    // Getters and Setters
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -49,5 +42,13 @@ public class Medicion {
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
+    }
+
+    public int getSensorId() {
+        return sensorId;
+    }
+
+    public void setSensorId(int sensorId) {
+        this.sensorId = sensorId;
     }
 }
