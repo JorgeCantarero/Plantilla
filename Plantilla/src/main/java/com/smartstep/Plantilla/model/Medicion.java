@@ -15,12 +15,16 @@ public class Medicion {
     @Id
     private int id;
     private double presion;
-    private Date fecha;
-    @ManyToOne 
+    private String fecha;
+    @ManyToOne
     private Sensor sensor; // Referencia al sensor al que pertenece la medición
 
+    public Medicion() {
+        // Constructor vacío requerido por JPA
+    }
+
     // Constructor
-    public Medicion(int id, double presion, Date fecha, Sensor sensorId) {
+    public Medicion(int id, double presion, String fecha, Sensor sensorId) {
         this.id = id;
         this.presion = presion;
         this.fecha = fecha;
@@ -44,11 +48,11 @@ public class Medicion {
         this.presion = presion;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

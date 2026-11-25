@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 public class Plantilla {
@@ -14,6 +15,9 @@ public class Plantilla {
     private double peso;
     private List<Medicion> mediciones;
     
+    public Plantilla() {
+        // Constructor vacío requerido por JPA
+    }
 
     // Constructor
     public Plantilla(int numSerie, int nivelBateria, double peso) {
