@@ -1,6 +1,8 @@
 package com.smartstep.Plantilla.controller;
 
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController 
 public class PacienteController {
     public int consultarPasos(int idPaciente) {
         //Devolvemos un valor ficticio de pasos para el paciente con el id proporcionado

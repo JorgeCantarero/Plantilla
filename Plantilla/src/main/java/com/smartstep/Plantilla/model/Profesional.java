@@ -3,6 +3,8 @@ package com.smartstep.Plantilla.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.Entity;
+
 public class Profesional extends Usuario {
     private int id; //aqui he cambiado de long a int
     //para que sea compatible con la clase usuario
