@@ -14,7 +14,7 @@ public class Sensor {
     private int id;
     private List<String> coordenadas;
 
-    protected Sensor() {
+    public Sensor() {
     }
 
     // Constructor
