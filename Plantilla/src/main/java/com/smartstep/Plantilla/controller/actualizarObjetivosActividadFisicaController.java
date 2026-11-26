@@ -3,7 +3,7 @@ package com.smartstep.Plantilla.controller;
 import com.smartstep.Plantilla.model.Paciente;
 import com.smartstep.Plantilla.model.Profesional;
 
-public class BlancaController {
+public class actualizarObjetivosActividadFisicaController {
     public boolean actualizarObjetivosActividadFisica(
             Profesional profesional,
             int pacienteId,
