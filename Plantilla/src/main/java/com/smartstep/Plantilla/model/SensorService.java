@@ -11,7 +11,7 @@ public class SensorService {
     RepositorySensor repositorySensor;
 
     public void guardarSensor(Sensor sensor) {
-        repositorySensor.save(sensor);
+        repositorySensor.saveAndFlush(sensor);
     }
 
     public Sensor obtenerSensorPorId(int id) {

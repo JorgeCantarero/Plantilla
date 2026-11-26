@@ -11,7 +11,7 @@ public class MedicionService {
     RepositoryMedicion repositoryMedicion;
 
     public void guardarMedicion(Medicion medicion) {
-        repositoryMedicion.save(medicion);
+        repositoryMedicion.saveAndFlush(medicion);
     }
 
     public Medicion obtenerMedicionPorId(int id) {
